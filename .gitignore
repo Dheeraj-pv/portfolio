@@ -1,0 +1,11 @@
+# Specific files
+/style.css
+/portfolio.html
+
+# Image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+
+# Ensure no hidden characters in this file

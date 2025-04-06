@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #A6E3E9;
+    position: relative;
+    overflow-y: auto;
+    flex-direction: column;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.container {
+    width: 99%;
+    padding: 200px;
+    height: 98%;
+    top: 7px;
+    background: #E3FDFD;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.box {
+    background:#CBF1F5;
+    padding: 20px;
+    border-radius: 8px;
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.box2 {
+    background:#71C9CE;
+    padding: 20px;
+    border-radius: 8px;
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.profile {
+    top: 50%; left: 50%; width: 30%; height: 60%; margin: 10px; border-radius: 20px;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.header { top: 1%; left: 1.25%; right: 1.25%; height: 10%; margin: 10px; border-radius: 20px;display: flex;flex-direction: column; }
+.main-text { top: 14%; left: 1.25%; width: 39%; height: 45%; margin: 10px; border-radius: 20px; }
+.projects { top: 14%; left: 63.25%; width: 34%; height: 65%; margin: 10px; border-radius: 20px; display: flex; justify-content: space-evenly; flex-direction:column ;}
+.bio { top: 62%; left: 1.25%; width: 29%; height: 34%; margin: 10px; border-radius: 20px; }
+.contact { top: 62%; left: 32.25%; width: 29%; height: 34%; margin: 10px; border-radius: 20px; }
+.footer { top: 82%; width: 34%; left: 63.25%; height: 14%; margin: 10px; border-radius: 20px; }
+
+.show {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+.profile.final-position {
+    top: 14% !important;
+    left: 42.25% !important;
+    width: 19% !important;
+    height: 45% !important;
+    transform: translate(0, 0) scale(1) !important;
+    transition: all 0.8s ease-in-out;
+}
+
+/* Hover effect for all containers */
+.box:hover, .box2:hover, .profile:hover {
+    transform: scale(1.03) !important;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projects::after, .contact::after {
+    content: '\2197'; 
+    position: absolute;
+    top: 1px;
+    right: 15px;
+    font-size: 50px;
+    color: rgb(52, 71, 93);
+}
+/* Expandable sub-containers inside Projects */
+.project-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #CBF1F5;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 30px 0;
+    text-align: left;
+    overflow: hidden;
+    cursor: pointer;
+    transition: height 0.5s ease-in-out;
+    height: 50px;
+    position: relative;
+    border-bottom: outset;
+}
+.project-item img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    display: none;
+}
+
+.project-item.expanded {
+    height: 200px;
+}
+
+.project-item.expanded img {
+    display: block;
+}
+
+.project-item:hover img {
+    display: block;
+}
+
+
+.project-item .text {
+    flex: 1; /* Let text take remaining space */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    max-width: 55%; /* Ensure text doesn't shrink too much */
+    overflow-wrap: break-word; /* Prevent text overflow */
+    word-wrap: break-word;
+    text-align: justify; /* Makes text look even */
+    padding: 10px;
+}
+
+.project-item.expanded .text {
+    opacity: 1;
+}
+
+
+.nav-list {
+    position: absolute; /* Change from absolute */
+    right: 3%;
+    pointer-events: auto; /* Ensures links are clickable */
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+nav {
+    z-index: 1000; /* Ensures navbar is always on top */
+}
+.nav-links{
+    font-size: normal;
+    text-decoration: none;
+    color: rgb(85, 85, 85);
+}
+
+.nav-links:hover {
+    color: rgb(245, 16, 16);
+}
+
+nav {
+    width: 88%;
+    position: absolute;
+    top: 1%;
+    right: 0%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    padding: 0 20px;
+}
+
+.aboutme {
+    position: relative;
+    top: 30px;
+    margin: 10px;;
+    font-size: medium;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.name {
+    font-size: large;
+    font-weight: 600;
+    color: rgb(85, 85, 85);
+    margin: 8px;
+}
+
+.maintext{
+    position: relative;
+   font-weight: bold;
+    top: 140px;
+    font-size:30px ;
+    margin-right: auto;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.social-list{
+    position:relative;
+    top: 20px;
+    left: 20px;
+    pointer-events: auto; /* Ensures links are clickable */
+    list-style: none;
+    gap: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.social-links{
+    font-size: normal;
+    text-decoration: none;
+    color: rgb(85, 85, 85);
+}
+
+.social-links:hover {
+    color: rgb(245, 16, 16);
+}
+
+.contactme{
+    position: relative;
+    top: 140px;
+    font-weight: bold;
+     font-size:30px ;
+     margin-right: auto;
+}
+
+.profile img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>AI Artist Portfolio</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="box profile">
+            <img src="profile1.jpg" alt="Profile Image">
+        </div>
+        <div class="box header">
+            <p class="name">Dheeraj pv</p>
+            <nav>
+                <ul class="nav-list">
+                    <li> <a class="nav-links"href="#project">PROJECTS</a></li>
+                    <li> <a class="nav-links"href="resume.html">RESUME</a></li>
+                    <li> <a class="nav-links"href="contactme.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="box main-text">
+            <p class="maintext">Engineer Redefining<br><span style="font-family: 'Orbitron', sans-serif;font-weight:100 ;">Innovation</span> with<br>Code-Driven Solutions</p>
+        </div>
+        <div class="box projects" onclick="alert('Projects Clicked!')">Projects
+            <div class="project-item expanded">
+                <img src="adimali2.jpg">
+                <div class="text">
+                    <p>gfghsddhvkfkshfvsivdsdfbefshvdhvddshdffkhdskdhbeheihdhfhwvefkhvfhfvwekhfvkdkfhvwekfvkfkadfwkfweiufhcjbfkekfaskfjba</p>
+                </div>
+            </div>
+            <div class="project-item">
+                <img src="adimali3.jpg" >
+                <div class="text">
+                    <p>gfghsddhvkfkshfvsivdsdfbefshvdhvddshdffkhdskdhbeheihdhfhwvefkhvfhfvwekhfvkdkfhvwekfvkfkadfwkfweiufhcjbfkekfaskfjba</p>
+                </div>
+            </div>
+        </div>
+        <div class="box bio">
+            <p class="aboutme">Curious and solution-driven developer with a passion for <strong>backend development and problem-solving</strong> . Always eager to learn, build, and innovate. Let’s create something great together!  <small><a href="resume.html">learn more about me</a></small> </p>
+        </div>
+        <div class="box2 contact"onclick="document.location='contactme.html' ">
+            <p>have some<br>questions?</p>
+            <p class="contactme">Contact Me</p>
+        </div>
+        <div class="box footer">
+            <ul class="social-list">
+                <li> <a class="social-links"href="">INSTAGRAM</a></li>
+                <li> <a class="social-links"href="#project">TWITER</a></li>
+                <li> <a class="social-links"href="https://www.linkedin.com/in/dheeraj-pv-8571432567">LINKEDIN</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let profile = document.querySelector(".profile");
+            let projectItems = document.querySelectorAll(".project-item");
+            let firstProject = document.querySelector(".project-item.expanded");
+    
+            setTimeout(() => {
+                profile.style.transform = "translate(-50%, -50%) scale(1)";
+            }, 100);
+    
+            setTimeout(() => {
+                profile.classList.add("final-position");
+            }, 600);
+    
+            setTimeout(() => {
+                document.querySelectorAll(".box,.box2").forEach((box, index) => {
+                    if (!box.classList.contains("profile")) {
+                        setTimeout(() => {
+                            box.classList.add("show");
+                        }, (index + 1) * 100);
+                    }
+                });
+            }, 800);
+     
+            let aboutme = document.querySelector(".aboutme");
+            if (aboutme) {
+                setTimeout(() => {
+                aboutme.classList.add("show");
+                }, 1400);
+            }
+
+            let maintext = document.querySelector(".maintext");
+            if (aboutme) {
+                setTimeout(() => {
+                maintext.classList.add("show");
+                }, 1400);
+            }
+
+
+            projectItems.forEach(item => {
+                item.addEventListener("mouseenter", () => {
+                    document.querySelectorAll(".project-item").forEach(i => i.classList.remove("expanded"));
+                    item.classList.add("expanded");
+                });
+            });
+    
+            document.querySelector(".projects").addEventListener("mouseleave", () => {
+                document.querySelectorAll(".project-item").forEach(i => i.classList.remove("expanded"));
+                firstProject.classList.add("expanded");
+            });
+        });
+    </script>
+    
+</body>
+</html>
+
