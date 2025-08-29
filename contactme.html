@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Contact Me</title>
     <style>
         * {
@@ -13,7 +14,7 @@
         }
 
         body {
-            background-color: #f8f1e6;
+            background-color: #A6E3E9;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,11 +25,11 @@
             position: relative;
             width: 450px;
             height: 600px;
-            background: #f8f1e6;
+            background: #CBF1F5;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: justify;
         }
 
         h2 {
@@ -46,7 +47,7 @@
         }
 
         input, textarea {
-            background-color: #f8f1e6;
+            background-color: #E3FDFD;
             width: 100%;
             padding: 10px;
             margin-top: 5px;
@@ -70,6 +71,17 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+        }
+        .icon{
+            background-color: #2a6f96;
+            position: relative;
+            bottom: -100px;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 10%;
+            border-radius: 40%;
+            cursor: pointer;
         }
 
         button:hover {
@@ -99,7 +111,24 @@
 
             <button type="submit">Submit</button>
         </form>
+        <p style="display: none;" id="PhoneNumber">+91 8921371486</p>
+        <p style="display: none;" id="MailId">dheerajpv@gmail.com</p>
+        <button class="icon" style="left: 140px;" onclick="copyText('PhoneNumber')"><i class="fas fa-phone"></i> </i></button>
+        <button class="icon" style="right: -180px;" onclick="copyText('MailId')"><i class="fas fa-envelope"></i></button>
     </div>
 
+
 </body>
+<script>
+function copyText(myText) {
+  const text = document.getElementById(myText).innerText;
+  navigator.clipboard.writeText(text)
+    .then(() => {
+      alert(myText+" copied to clippboard");
+    })
+    .catch(err => {
+      console.error("Failed to copy: ", err);
+    });
+}
+</script>
 </html>

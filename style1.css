@@ -52,10 +52,11 @@ html {
 }
 
 .profile {
-    top: 50%; left: 50%; width: 30%; height: 60%; margin: 10px; border-radius: 20px;
+    top: 50%; left: 50%; width: 20%; height: 70%; margin: 10px; border-radius: 20px;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    pointer-events: none;
 }
 
 .header { top: 1%; left: 1.25%; right: 1.25%; height: 10%; margin: 10px; border-radius: 20px;display: flex;flex-direction: column; }
@@ -137,7 +138,7 @@ html {
     max-width: 55%; /* Ensure text doesn't shrink too much */
     overflow-wrap: break-word; /* Prevent text overflow */
     word-wrap: break-word;
-    text-align: justify; /* Makes text look even */
+    text-align: left; /* Makes text look even */
     padding: 10px;
 }
 

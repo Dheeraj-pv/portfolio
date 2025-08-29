@@ -2,24 +2,25 @@
 <html lang="en">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style1.css">
-    <title>AI Artist Portfolio</title>
+    <title>Portfolio</title>
     
 </head>
 <body>
     <div class="container">
-        <div class="box profile">
-            <img src="profile1.jpg" alt="Profile Image">
+        <div class="box profile" style="padding: 0px;">
+            <img style="object-fit: cover; width: 100%; height: 100%;"  src="profile2.jpg" alt="Profile Image">
         </div>
         <div class="box header">
             <p class="name">Dheeraj pv</p>
             <nav>
                 <ul class="nav-list">
                     <li> <a class="nav-links"href="#project">PROJECTS</a></li>
-                    <li> <a class="nav-links"href="resume.html">RESUME</a></li>
+                    <li> <a class="nav-links"href="resume2.html">RESUME</a></li>
                     <li> <a class="nav-links"href="contactme.html">CONTACT</a></li>
                 </ul>
             </nav>
@@ -29,17 +30,29 @@
         </div>
         <div class="box projects" onclick="alert('Projects Clicked!')">Projects
             <div class="project-item expanded">
-                <img src="adimali2.jpg">
+                <img style="display: none;" src="adimali2.jpg">
                 <div class="text">
-                    <p>gfghsddhvkfkshfvsivdsdfbefshvdhvddshdffkhdskdhbeheihdhfhwvefkhvfhfvwekhfvkdkfhvwekfvkfkadfwkfweiufhcjbfkekfaskfjba</p>
+                    <h4>Exploring Colors Of Adimaly</h4><br>
+                    <p> This is a citizen centric grama panchayath portal that documents all the
+                        available resources.</p>
                 </div>
             </div>
             <div class="project-item">
-                <img src="adimali3.jpg" >
+                <img style="display: none;" src="adimali3.jpg" >
                 <div class="text">
-                    <p>gfghsddhvkfkshfvsivdsdfbefshvdhvddshdffkhdskdhbeheihdhfhwvefkhvfhfvwekhfvkdkfhvwekfvkfkadfwkfweiufhcjbfkekfaskfjba</p>
+                    <h4 >Vazha</h4><br>
+                    <p>It is a front-end only website that was created purely for
+                        entertainment purposes.</p>
                 </div>
             </div>
+            <div class="project-item">
+                <img style="display: none;" src="adimali3.jpg" >
+                <div class="text">
+                    <h4 >PET</h4><br>
+                    <p> It is a web application which can trak personal income and expense</p>
+                </div>
+            </div>
+            
         </div>
         <div class="box bio">
             <p class="aboutme">Curious and solution-driven developer with a passion for <strong>backend development and problem-solving</strong> . Always eager to learn, build, and innovate. Let’s create something great together!  <small><a href="resume.html">learn more about me</a></small> </p>
@@ -52,7 +65,7 @@
             <ul class="social-list">
                 <li> <a class="social-links"href="">INSTAGRAM</a></li>
                 <li> <a class="social-links"href="#project">TWITER</a></li>
-                <li> <a class="social-links"href="https://www.linkedin.com/in/dheeraj-pv-8571432567">LINKEDIN</a></li>
+                <li> <a class="social-links"href="https://www.linkedin.com/in/dheeraj-pv-851743256">LINKEDIN</a></li>
             </ul>
         </div>
     </div>
@@ -70,6 +83,9 @@
             setTimeout(() => {
                 profile.classList.add("final-position");
             }, 600);
+            setTimeout(() => {
+                profile.style.pointerEvents = 'all';
+            }, 1500);
     
             setTimeout(() => {
                 document.querySelectorAll(".box,.box2").forEach((box, index) => {
