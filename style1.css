@@ -246,7 +246,7 @@ nav {
     transition: transform 0.5s ease-in-out;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .maintext {
     font-size: 1.1rem;
   }
@@ -288,9 +288,6 @@ nav {
     width: 99%;
   }
 
-}
-.container {
-  min-width: 600px; /* forces desktop-like layout */
 }
 
 
