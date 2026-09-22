@@ -164,11 +164,9 @@ section h2 { margin: 0 0 var(--space-5); }
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   position: relative;
+  box-shadow: none; /* drop bundle.css's featured-card accent glow */
 }
-/* The accent backlight was originally featured-card-only; every project card gets it now. */
-.project-grid .ds-project-card { box-shadow: var(--shadow-glow-accent); }
 .ds-project-card__desc { flex: 1; }
-.projects-more { margin: var(--space-6) 0 0; color: var(--ink-muted); }
 .ds-project-card::before,
 .ds-project-card::after {
   content: ''; position: absolute;
