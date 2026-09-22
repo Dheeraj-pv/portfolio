@@ -15,7 +15,16 @@
     'CI trust policies and centralized secrets management\n' +
     '- Contributed backend features and fixes in a Next.js/TypeScript + FastAPI/PostgreSQL codebase, ' +
     'working spec-first with written technical proposals for new features\n\n' +
-    'stack: Terraform, AWS, GitHub Actions, FastAPI';
+    'stack: Terraform, AWS, GitHub Actions, FastAPI\n\n' +
+    '---\n\n' +
+    'Jetpack Softs — Software Engineering Intern (April 2025 — November 2025)\n\n' +
+    '- Built and maintained RESTful APIs for CRUD operations and database interactions using Node.js ' +
+    'and MySQL\n' +
+    '- Developed backend functionality for a retail and service management platform — repairs, ' +
+    'invoicing, and purchase tracking — with a focus on scalability\n' +
+    '- Integrated frontend components with backend services and documented features for deployment ' +
+    'and maintenance\n\n' +
+    'stack: Node.js, JavaScript, MySQL, REST APIs';
 
   var SKILLS_TEXT = [
     'Languages         TypeScript, JavaScript, Python, SQL, HTML/CSS, Bash',
