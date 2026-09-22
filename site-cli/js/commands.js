@@ -8,6 +8,15 @@
     'Docker deployment and polished frontends. I like clean architecture and small details, from a ' +
     'controller/service/repository split to a night-sky family history site.';
 
+  var EXPERIENCE_TEXT = 'Lektik — Software Engineering Intern (June 2026 — Present)\n\n' +
+    '- Migrated CI/CD from self-hosted GitLab to GitHub Actions, building automated deploy pipelines ' +
+    'across dev, staging, and production\n' +
+    '- Provisioned AWS infrastructure as code with Terraform (ECS, ECR, Cognito, IAM, SES), including ' +
+    'CI trust policies and centralized secrets management\n' +
+    '- Contributed backend features and fixes in a Next.js/TypeScript + FastAPI/PostgreSQL codebase, ' +
+    'working spec-first with written technical proposals for new features\n\n' +
+    'stack: Terraform, AWS, GitHub Actions, FastAPI';
+
   var SKILLS_TEXT = [
     'Languages         TypeScript, JavaScript, Python, SQL, HTML/CSS, Bash',
     'Frontend          Next.js, React, Vite, Tailwind CSS, EJS',
@@ -119,6 +128,7 @@
       type: 'dir',
       children: {
         'about.md': { type: 'file', content: ABOUT_TEXT },
+        'experience.log': { type: 'file', content: EXPERIENCE_TEXT },
         'skills.txt': { type: 'file', content: SKILLS_TEXT },
         'contact.sh': {
           type: 'file',
@@ -241,7 +251,7 @@
         desc: 'list available commands', run: function () {
           api.print([
             'FILESYSTEM   ls [-a] [dir]   cd <dir>   cat <file>   pwd   find . -name "<pattern>"',
-            'INFO         about   man <cmd>   whoami   neofetch   projects   skills',
+            'INFO         about   experience   man <cmd>   whoami   neofetch   projects   skills',
             'CONTACT      contact   social   resume   legacy',
             'FUN          coffee   fortune   ping <name>   git log   top',
             'DISPLAY      theme <name>   crt on|off   matrix   sound on|off',
@@ -252,6 +262,7 @@
         }
       },
       about: { desc: 'print the about text', run: function () { api.print(ABOUT_TEXT); } },
+      experience: { desc: 'print work experience', run: function () { api.print(EXPERIENCE_TEXT); } },
       man: {
         desc: 'show the manual page for a command', run: function (args) {
           var name = args[0];

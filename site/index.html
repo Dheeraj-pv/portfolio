@@ -41,6 +41,7 @@
       </div>
       <nav class="topbar__nav" aria-label="Sections">
         <a href="#about">about.md</a>
+        <a href="#experience">experience.log</a>
         <a href="#projects">projects/</a>
         <a href="#skills">skills/</a>
         <a href="#contact">contact.sh</a>
@@ -72,6 +73,25 @@
     <section id="about">
       <h2 class="section-prompt"><span class="section-prompt__sigil">$</span> cat about.md</h2>
       <p class="body-lg about">I build full-stack web apps end to end: layered APIs, authentication, storage, Docker deployment and polished frontends. I like clean architecture and small details, from a controller/service/repository split to a night-sky family history site.</p>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-prompt"><span class="section-prompt__sigil">$</span> cat experience.log</h2>
+      <article class="ds-project-card ds-experience-card">
+        <h3 class="ds-project-card__title display-md">Lektik — Software Engineering Intern</h3>
+        <p class="ds-experience-card__meta code-tag">June 2026 — Present</p>
+        <ul class="ds-experience-card__list body">
+          <li>Migrated CI/CD from self-hosted GitLab to GitHub Actions, building automated deploy pipelines across dev, staging, and production</li>
+          <li>Provisioned AWS infrastructure as code with Terraform (ECS, ECR, Cognito, IAM, SES), including CI trust policies and centralized secrets management</li>
+          <li>Contributed backend features and fixes in a Next.js/TypeScript + FastAPI/PostgreSQL codebase, working spec-first with written technical proposals for new features</li>
+        </ul>
+        <div class="ds-project-card__tags">
+          <span class="ds-skill-badge code-tag">Terraform</span>
+          <span class="ds-skill-badge code-tag">AWS</span>
+          <span class="ds-skill-badge code-tag">GitHub Actions</span>
+          <span class="ds-skill-badge code-tag">FastAPI</span>
+        </div>
+      </article>
     </section>
 
     <section id="projects">
