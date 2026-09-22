@@ -60,6 +60,14 @@
         'dashboard and email-based password reset with signed, expiring tokens.',
       tags: ['Flask', 'SQLAlchemy', 'MySQL', 'Flask-Admin'],
       repo: 'https://github.com/Dheeraj-pv/miniproject'
+    },
+    {
+      id: 'bookmyshow-bot', file: 'bookmyshow-bot.md', name: 'BookMyShow Ticket Bot',
+      desc: 'A Telegram bot that watches BookMyShow for a movie/venue/date and messages you the moment ' +
+        'tickets go on sale. Stealth-wrapped headless Chromium scraping, per-user job scheduling with a ' +
+        'busy lock to stop overlapping runs, and a global error handler.',
+      tags: ['Python', 'python-telegram-bot', 'Playwright'],
+      repo: 'https://github.com/Dheeraj-pv/bookmyshow-ticket-bot'
     }
   ];
 
@@ -97,7 +105,7 @@
   ];
 
   var EXT_TAGS = {
-    py: ['fastapi', 'flask', 'sqlalchemy', 'pydantic', 'alembic'],
+    py: ['fastapi', 'flask', 'sqlalchemy', 'pydantic', 'alembic', 'playwright', 'python-telegram-bot'],
     js: ['vanilla js', 'express', 'ejs'],
     ts: ['next.js', 'typescript', 'prisma']
   };
@@ -361,7 +369,8 @@
           api.print('Other repos (summarized, not literal commit text):');
           api.print([
             '        (tradelink)          Next.js 16 service marketplace — Prisma, JWT, MinIO, Docker',
-            '        (grama-panchayat)    Flask citizen portal for local government services'
+            '        (grama-panchayat)    Flask citizen portal for local government services',
+            '        (bookmyshow-bot)     Telegram bot that scrapes BookMyShow for ticket availability'
           ].join('\n'));
           api.print('');
           api.printLink('full history: github.com/Dheeraj-pv', 'https://github.com/Dheeraj-pv');
