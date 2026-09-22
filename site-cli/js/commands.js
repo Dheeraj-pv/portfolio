@@ -133,7 +133,7 @@
         'skills.txt': { type: 'file', content: SKILLS_TEXT },
         'contact.sh': {
           type: 'file',
-          content: '#!/bin/sh\n# Reach me here:\necho "GitHub: https://github.com/Dheeraj-pv"\n# No email or LinkedIn on file yet.',
+          content: '#!/bin/sh\n# Reach me here:\necho "Email:  dheeerajpv@gmail.com"\necho "GitHub: https://github.com/Dheeraj-pv"',
           link: 'https://github.com/Dheeraj-pv',
           linkLabel: 'GitHub: https://github.com/Dheeraj-pv'
         },
@@ -348,15 +348,15 @@
       social: {
         desc: 'social links', run: function () {
           api.print('Reach me here:');
+          api.printLink('  Email  → dheeerajpv@gmail.com', 'mailto:dheeerajpv@gmail.com');
           api.printLink('  GitHub → https://github.com/Dheeraj-pv', 'https://github.com/Dheeraj-pv');
-          api.print('No email or LinkedIn on file yet.');
         }
       },
       contact: {
         desc: 'how to reach me', run: function () {
           api.print('Reach me here:');
+          api.printLink('  Email  → dheeerajpv@gmail.com', 'mailto:dheeerajpv@gmail.com');
           api.printLink('  GitHub → https://github.com/Dheeraj-pv', 'https://github.com/Dheeraj-pv');
-          api.print('No email or LinkedIn on file yet — GitHub is the best way for now.');
         }
       },
       resume: { desc: 'resume', run: function () { api.print("No resume on file yet. Try 'ls projects' or 'contact'."); } },
