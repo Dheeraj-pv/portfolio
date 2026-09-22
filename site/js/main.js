@@ -1,6 +1,6 @@
 (function () {
   var toggle = document.getElementById('theme-toggle');
-  var crtToggle = document.getElementById('crt-toggle');
+  var fxToggle = document.getElementById('fx-toggle');
   var html = document.documentElement;
 
   function setTheme(theme) {
@@ -17,24 +17,16 @@
     setTheme(html.getAttribute('data-theme') === 'terminal' ? 'daylight' : 'terminal');
   });
 
-  // CRT scanlines only render in the dark theme (see site.css); this just lets
-  // the visitor turn that layer off regardless of theme, independent of it.
+  // CRT scanlines (see site.css, dark theme only) and the Matrix rain below
+  // are one combined "FX" toggle, since both are the same kind of retro
+  // visual flourish and having two separate buttons for them was clutter.
   function setCrt(on) {
     html.classList.toggle('crt-off', !on);
-    crtToggle.textContent = on ? 'CRT: On' : 'CRT: Off';
-    try { localStorage.setItem('crt', on ? '1' : '0'); } catch (e) {}
   }
-  var crtSaved = null;
-  try { crtSaved = localStorage.getItem('crt'); } catch (e) {}
-  setCrt(crtSaved !== '0');
-  crtToggle.addEventListener('click', function () {
-    setCrt(html.classList.contains('crt-off'));
-  });
 
   // Matrix rain, same canvas/animation as the CLI build. Only visible in the
   // margins outside .shell/.footer (see site.css) and forced off in the
   // daylight theme, since it's a dark-theme-only visual gag either way.
-  var matrixToggle = document.getElementById('matrix-toggle');
   var matrixCanvas = null, matrixRAF = null, matrixDrops = null;
   function reducedMotion() {
     return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -79,17 +71,20 @@
     matrixCanvas.remove();
     matrixCanvas = null;
   }
-  function setMatrix(on) {
+  var fxOn = false;
+  function setFx(on) {
+    setCrt(on);
     if (on && reducedMotion()) on = false;
     if (on) startMatrix(); else stopMatrix();
-    matrixToggle.textContent = on ? 'Matrix: On' : 'Matrix: Off';
-    try { localStorage.setItem('matrix', on ? '1' : '0'); } catch (e) {}
+    fxOn = on;
+    fxToggle.textContent = on ? 'FX: On' : 'FX: Off';
+    try { localStorage.setItem('fx', on ? '1' : '0'); } catch (e) {}
   }
-  var matrixSaved = null;
-  try { matrixSaved = localStorage.getItem('matrix'); } catch (e) {}
-  setMatrix(matrixSaved === '1');
-  matrixToggle.addEventListener('click', function () {
-    setMatrix(!matrixCanvas);
+  var fxSaved = null;
+  try { fxSaved = localStorage.getItem('fx'); } catch (e) {}
+  setFx(fxSaved === '1');
+  fxToggle.addEventListener('click', function () {
+    setFx(!fxOn);
   });
 
   Array.prototype.forEach.call(document.querySelectorAll('.ds-project-card'), function (card) {

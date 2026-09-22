@@ -197,7 +197,7 @@ section h2 { margin: 0 0 var(--space-5); }
 
   .topbar__inner { padding: var(--space-3) var(--space-4); gap: var(--space-3); }
   .topbar__nav { display: none; }
-  .crt-toggle, .matrix-toggle { display: none; } /* keep the mobile titlebar down to one pill button */
+  .fx-toggle { display: none; } /* keep the mobile titlebar down to one pill button */
   .boot-logo { font-size: 11px; line-height: 14px; }
   .shell { padding: var(--space-7) var(--space-4) var(--space-8); }
   section { margin-top: var(--space-8); }
