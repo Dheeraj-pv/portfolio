@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="terminal">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dheeraj P V — Full-stack developer</title>
+<meta name="description" content="Dheeraj P V is a full-stack developer building web platforms with Next.js, FastAPI and PostgreSQL. Projects, skills and contact.">
+<meta name="theme-color" content="#0d1210">
+<meta property="og:title" content="Dheeraj P V — Full-stack developer">
+<meta property="og:description" content="Full-stack developer — Next.js, FastAPI, PostgreSQL.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1210'/%3E%3Cpath d='M16 5l9 8-9 14-9-14z' fill='none' stroke='%2339ff88' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/bundle.css">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <div class="crt-overlay" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <span class="term-dots" aria-hidden="true">
+        <span class="term-dot term-dot--a"></span>
+        <span class="term-dot term-dot--b"></span>
+        <span class="term-dot term-dot--c"></span>
+      </span>
+      <div class="topbar__path">
+        <a class="topbar__brand code-tag" href="#top">dheeraj@portfolio:~$</a>
+        <span class="term-cursor" aria-hidden="true"></span>
+      </div>
+      <nav class="topbar__nav" aria-label="Sections">
+        <a href="#about">about.md</a>
+        <a href="#projects">projects/</a>
+        <a href="#skills">skills/</a>
+        <a href="#contact">contact.sh</a>
+      </nav>
+      <div class="topbar__controls">
+        <a class="theme-toggle cli-toggle" href="../site-cli/index.html">./cli</a>
+        <button class="theme-toggle crt-toggle" id="crt-toggle" type="button">CRT: On</button>
+        <button class="theme-toggle" id="theme-toggle" type="button">Daylight</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="shell">
+    <section id="top" class="hero">
+      <pre class="boot-logo" aria-hidden="true">┌───────────────────┐
+│       D P V       │
+│  full-stack dev   │
+└───────────────────┘</pre>
+      <div class="boot-log" aria-hidden="true">
+        <p class="boot-line code-tag">Loading profile... done</p>
+        <p class="boot-line code-tag">Connecting to GitHub... done</p>
+        <p class="boot-line code-tag" id="boot-greeting">Thanks for stopping by.</p>
+        <p class="boot-skip-hint code-tag">press any key to skip</p>
+      </div>
+      <h1 class="display-xl">Dheeraj P V</h1>
+      <p class="hero__title"><span class="hero__tagline-text" id="hero-tagline">Full-stack developer — Next.js, FastAPI, PostgreSQL</span><span class="term-cursor" aria-hidden="true"></span></p>
+    </section>
+
+    <section id="about">
+      <h2 class="section-prompt"><span class="section-prompt__sigil">$</span> cat about.md</h2>
+      <p class="body-lg about">I build full-stack web apps end to end: layered APIs, authentication, storage, Docker deployment and polished frontends. I like clean architecture and small details, from a controller/service/repository split to a night-sky family history site.</p>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-prompt"><span class="section-prompt__sigil">$</span> ls projects/</h2>
+      <div class="project-grid">
+        <article class="ds-project-card ds-project-card--featured">
+          <h3 class="ds-project-card__title display-md">The Family Galaxy</h3>
+          <p class="ds-project-card__desc body">Relatives as stars in a night sky — before/after photo sliders, flippable postcards, and a timeline that ages the sky through the decades. Vanilla JS with Supabase (Postgres, Storage, row-level security) for shared cloud sync.</p>
+          <div class="ds-project-card__tags">
+            <span class="ds-skill-badge code-tag">Vanilla JS</span>
+            <span class="ds-skill-badge code-tag">Supabase</span>
+            <span class="ds-skill-badge code-tag">PostgreSQL</span>
+            <span class="ds-skill-badge code-tag">Row-level security</span>
+          </div>
+          <a class="ds-project-card__link body-sm" href="https://github.com/Dheeraj-pv/Family-Galaxy" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+
+        <article class="ds-project-card">
+          <h3 class="ds-project-card__title display-md">TradeLink</h3>
+          <p class="ds-project-card__desc body">A service marketplace on Next.js 16 (App Router) and TypeScript — route → controller → service → repository, Prisma with PostgreSQL, JWT auth, MinIO file storage, Firebase push notifications, OpenTelemetry. Ships with Docker.</p>
+          <div class="ds-project-card__tags">
+            <span class="ds-skill-badge code-tag">Next.js 16</span>
+            <span class="ds-skill-badge code-tag">Prisma</span>
+            <span class="ds-skill-badge code-tag">JWT</span>
+            <span class="ds-skill-badge code-tag">Docker</span>
+          </div>
+          <a class="ds-project-card__link body-sm" href="https://github.com/Dheeraj-pv/tradeLink" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+
+        <article class="ds-project-card">
+          <h3 class="ds-project-card__title display-md">TradeLink (FastAPI edition)</h3>
+          <p class="ds-project-card__desc body">The same marketplace rebuilt with a Python backend — FastAPI, SQLAlchemy 2, Alembic migrations, Pydantic validation, JWT auth and TOTP two-factor login, a pytest suite and pre-commit hooks.</p>
+          <div class="ds-project-card__tags">
+            <span class="ds-skill-badge code-tag">FastAPI</span>
+            <span class="ds-skill-badge code-tag">SQLAlchemy 2</span>
+            <span class="ds-skill-badge code-tag">TOTP 2FA</span>
+            <span class="ds-skill-badge code-tag">Pytest</span>
+          </div>
+          <a class="ds-project-card__link body-sm" href="https://github.com/Dheeraj-pv/tradeLink-FastApi" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+
+        <article class="ds-project-card">
+          <h3 class="ds-project-card__title display-md">Grama Panchayat Citizen Portal</h3>
+          <p class="ds-project-card__desc body">A citizen-facing portal for local services — healthcare, education, transport, emergency contacts and tourism. Flask with SQLAlchemy and MySQL, Flask-Login auth, a Flask-Admin dashboard and email-based password reset with signed, expiring tokens.</p>
+          <div class="ds-project-card__tags">
+            <span class="ds-skill-badge code-tag">Flask</span>
+            <span class="ds-skill-badge code-tag">SQLAlchemy</span>
+            <span class="ds-skill-badge code-tag">MySQL</span>
+            <span class="ds-skill-badge code-tag">Flask-Admin</span>
+          </div>
+          <a class="ds-project-card__link body-sm" href="https://github.com/Dheeraj-pv/miniproject" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+
+        <article class="ds-project-card">
+          <h3 class="ds-project-card__title display-md">EVO Munnar</h3>
+          <p class="ds-project-card__desc body">An Express backend serving a React (Vite) frontend — register and login flows, cookie-based auth middleware that gates routes before static assets are served, and server-rendered EJS bill pages.</p>
+          <div class="ds-project-card__tags">
+            <span class="ds-skill-badge code-tag">Express</span>
+            <span class="ds-skill-badge code-tag">React</span>
+            <span class="ds-skill-badge code-tag">Vite</span>
+            <span class="ds-skill-badge code-tag">EJS</span>
+          </div>
+          <a class="ds-project-card__link body-sm" href="https://github.com/Dheeraj-pv/EVO_MUNNAR" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+      </div>
+      <p class="projects-more body-sm">Also: <a href="https://github.com/Dheeraj-pv/personal_expense" target="_blank" rel="noopener">Personal Expense Tracker</a> — Express with session auth and bcrypt password hashing. More on <a href="https://github.com/Dheeraj-pv" target="_blank" rel="noopener">GitHub</a>.</p>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-prompt"><span class="section-prompt__sigil">$</span> grep -r skills/</h2>
+      <div class="ds-skill-group">
+        <span class="ds-skill-group__label caption">Languages</span>
+        <div class="ds-skill-row">
+          <span class="ds-skill-badge code-tag">TypeScript</span>
+          <span class="ds-skill-badge code-tag">JavaScript</span>
+          <span class="ds-skill-badge code-tag">Python</span>
+          <span class="ds-skill-badge code-tag">SQL</span>
+          <span class="ds-skill-badge code-tag">HTML/CSS</span>
+          <span class="ds-skill-badge code-tag">Bash</span>
+        </div>
+      </div>
+      <div class="ds-skill-group">
+        <span class="ds-skill-group__label caption">Frontend</span>
+        <div class="ds-skill-row">
+          <span class="ds-skill-badge code-tag">Next.js</span>
+          <span class="ds-skill-badge code-tag">React</span>
+          <span class="ds-skill-badge code-tag">Vite</span>
+          <span class="ds-skill-badge code-tag">Tailwind CSS</span>
+          <span class="ds-skill-badge code-tag">EJS</span>
+        </div>
+      </div>
+      <div class="ds-skill-group">
+        <span class="ds-skill-group__label caption">Backend</span>
+        <div class="ds-skill-row">
+          <span class="ds-skill-badge code-tag">FastAPI</span>
+          <span class="ds-skill-badge code-tag">Express</span>
+          <span class="ds-skill-badge code-tag">Flask</span>
+          <span class="ds-skill-badge code-tag">Prisma</span>
+          <span class="ds-skill-badge code-tag">SQLAlchemy</span>
+          <span class="ds-skill-badge code-tag">Alembic</span>
+          <span class="ds-skill-badge code-tag">Pydantic</span>
+          <span class="ds-skill-badge code-tag">Firebase Cloud Messaging</span>
+        </div>
+      </div>
+      <div class="ds-skill-group">
+        <span class="ds-skill-group__label caption">Auth &amp; security</span>
+        <div class="ds-skill-row">
+          <span class="ds-skill-badge code-tag">JWT</span>
+          <span class="ds-skill-badge code-tag">Sessions</span>
+          <span class="ds-skill-badge code-tag">bcrypt</span>
+          <span class="ds-skill-badge code-tag">TOTP 2FA</span>
+          <span class="ds-skill-badge code-tag">Row-level security</span>
+        </div>
+      </div>
+      <div class="ds-skill-group">
+        <span class="ds-skill-group__label caption">Data &amp; storage</span>
+        <div class="ds-skill-row">
+          <span class="ds-skill-badge code-tag">PostgreSQL</span>
+          <span class="ds-skill-badge code-tag">MySQL</span>
+          <span class="ds-skill-badge code-tag">Supabase</span>
+          <span class="ds-skill-badge code-tag">MinIO / S3</span>
+        </div>
+      </div>
+      <div class="ds-skill-group">
+        <span class="ds-skill-group__label caption">DevOps</span>
+        <div class="ds-skill-row">
+          <span class="ds-skill-badge code-tag">Docker</span>
+          <span class="ds-skill-badge code-tag">Docker Compose</span>
+          <span class="ds-skill-badge code-tag">GitHub Actions</span>
+          <span class="ds-skill-badge code-tag">AWS</span>
+          <span class="ds-skill-badge code-tag">Terraform</span>
+          <span class="ds-skill-badge code-tag">OpenTelemetry</span>
+          <span class="ds-skill-badge code-tag">Linux</span>
+        </div>
+      </div>
+      <div class="ds-skill-group">
+        <span class="ds-skill-group__label caption">Testing &amp; tooling</span>
+        <div class="ds-skill-row">
+          <span class="ds-skill-badge code-tag">Pytest</span>
+          <span class="ds-skill-badge code-tag">Vitest</span>
+          <span class="ds-skill-badge code-tag">Playwright</span>
+          <span class="ds-skill-badge code-tag">ESLint</span>
+          <span class="ds-skill-badge code-tag">Prettier</span>
+          <span class="ds-skill-badge code-tag">Git</span>
+          <span class="ds-skill-badge code-tag">Claude Code</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-prompt"><span class="section-prompt__sigil">$</span> ./contact.sh</h2>
+      <p class="body contact-note">The source for everything above is on GitHub.</p>
+      <div class="contact-row">
+        <!-- Add email / LinkedIn / resume here as .ds-contact-link entries once you want them listed. -->
+        <a class="ds-contact-link" href="https://github.com/Dheeraj-pv" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.4c0-.9.3-1.5.7-1.9-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2V19"/></svg>
+          <span class="ds-contact-link__label body-sm">GitHub</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner body-sm">© 2026 Dheeraj P V</div>
+  </footer>
+
+  <script src="js/bundle.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

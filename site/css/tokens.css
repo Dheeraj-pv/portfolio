@@ -1,0 +1,120 @@
+/* Compiled from tokens.json — "Dheeraj P V" design system. */
+
+:root, [data-theme="terminal"] {
+  --surface-000: #0d1210;
+  --surface-100: #141b18;
+  --surface-200: #1c2622;
+  --border: #567a6b;
+  --ink: #eaf2ee;
+  --ink-muted: #8fa79c;
+  --accent: #39ff88;
+  --accent-secondary: #4dd8e6;
+  --success: var(--accent);
+  --danger: #ff6b57;
+  --on-accent: var(--surface-000);
+  --on-accent-secondary: var(--surface-000);
+  --on-success: var(--surface-000);
+  --on-danger: var(--surface-000);
+  --focus-ring: var(--accent-secondary);
+  --shadow-card: 0 1px 2px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.35);
+  --shadow-raised: 0 12px 32px rgba(0,0,0,0.5);
+  --shadow-glow-accent: 0 0 0 1px rgba(57,255,136,0.35), 0 0 32px rgba(57,255,136,0.25);
+}
+
+[data-theme="daylight"] {
+  --surface-000: #f5f7f5;
+  --surface-100: #eceeec;
+  --surface-200: #e0e5e0;
+  --border: #778a7f;
+  --ink: #12201a;
+  --ink-muted: #55655c;
+  --accent: #157a45;
+  --accent-secondary: #146f7a; /* darkened from #177a85: link text was 4.33:1 on surface-100 */
+  --success: var(--accent);
+  --danger: #c23b2a;
+  --on-accent: var(--surface-000);
+  --on-accent-secondary: var(--surface-000);
+  --on-success: var(--surface-000);
+  --on-danger: var(--surface-000);
+  --focus-ring: var(--accent-secondary);
+  --shadow-card: 0 1px 2px rgba(18,32,26,0.06), 0 8px 24px rgba(18,32,26,0.08);
+  --shadow-raised: 0 12px 32px rgba(18,32,26,0.12);
+  --shadow-glow-accent: 0 0 0 1px rgba(21,122,69,0.25), 0 4px 16px rgba(21,122,69,0.15);
+}
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+.display-xl {
+  font-family: var(--font-display);
+  font-size: 64px;
+  line-height: 61px;
+  font-weight: 600;
+}
+
+.display-lg {
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 600;
+}
+
+.display-md {
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 600;
+}
+
+.body-lg {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.body-sm {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.caption {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.code-tag {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+}
+

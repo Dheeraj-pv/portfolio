@@ -1,0 +1,134 @@
+/* Layout + engine styles for the CLI portfolio. Tokens come from tokens.css
+   (shared with ../site/) — this file only adds what a full-screen terminal
+   app needs on top of them; it doesn't touch tokens.css itself. */
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--surface-000); color: var(--ink);
+  font-family: var(--font-mono);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+a { color: var(--accent-secondary); }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px; }
+
+.noscript-fallback {
+  max-width: 560px; margin: var(--space-9) auto; padding: 0 var(--space-5);
+  font-family: var(--font-mono); font-size: 15px; line-height: 24px; text-align: center;
+}
+
+/* Same static, low-alpha scanline texture as the main site, dark-theme only. */
+.crt-overlay {
+  position: fixed; inset: 0; z-index: 40; pointer-events: none; opacity: 0;
+  background: repeating-linear-gradient(to bottom, rgba(0,0,0,0.06) 0px, rgba(0,0,0,0.06) 1px, transparent 1px, transparent 3px);
+}
+[data-theme="terminal"] .crt-overlay { opacity: 1; }
+html.crt-off .crt-overlay { opacity: 0 !important; }
+
+.matrix-canvas { position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.55; }
+
+.term-app {
+  position: relative; z-index: 2;
+  /* Fills the viewport exactly (height, not min-height) so the whole layout
+     is sized by flex, not by vh-guesswork stacked on top of margins — that
+     mismatch was what caused an outer page scrollbar. Only .term-output
+     (below) scrolls. */
+  max-width: 1200px; width: 100%; margin: 0 auto;
+  height: 100vh; height: 100dvh;
+  padding: var(--space-5) var(--space-4);
+  box-sizing: border-box;
+  display: flex; flex-direction: column;
+}
+
+.term-titlebar {
+  flex: none;
+  display: flex; align-items: center; gap: var(--space-3);
+  background: var(--surface-100); border: 1px solid var(--border); border-bottom: none;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: var(--space-3) var(--space-5);
+}
+.term-dots { display: inline-flex; gap: 6px; flex: none; }
+.term-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.term-dot--a { background: #ff5f56; }
+.term-dot--b { background: #ffbd2e; }
+.term-dot--c { background: #27c93f; }
+.term-titlebar__path { font-size: 13px; color: var(--ink); }
+.term-legacy-link { margin-left: auto; font-size: 12px; color: var(--ink-muted); text-decoration: none; }
+.term-legacy-link:hover { color: var(--accent); }
+
+.term-screen {
+  /* flex:1 (not a vh-based height) so it exactly fills whatever the titlebar
+     and chips leave inside .term-app's fixed viewport height. min-height:0
+     overrides flex's default min-height:auto, which would otherwise let this
+     grow to fit .term-output's full content instead of scrolling it. */
+  flex: 1; min-height: 0;
+  display: flex; flex-direction: column;
+  background: var(--surface-000); border: 1px solid var(--border);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.term-shake { animation: term-shake 0.4s ease; }
+@keyframes term-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(2px); }
+}
+
+.term-output {
+  flex: 1; min-height: 0; overflow-y: auto; padding: var(--space-4) var(--space-5);
+  font-size: 14.5px; line-height: 23px; white-space: pre-wrap; word-break: break-word;
+}
+.term-line { margin: 0 0 2px; }
+.term-echo-prompt { color: var(--accent); margin-right: var(--space-2); }
+.term-out-error { color: var(--danger); }
+.term-out-achieve { color: var(--accent); }
+.term-out-mono { color: var(--ink-muted); }
+.term-output a { color: var(--accent-secondary); }
+
+.term-inputline {
+  display: flex; align-items: center; gap: var(--space-2);
+  border-top: 1px solid var(--border); background: var(--surface-100);
+  padding: var(--space-3) var(--space-5);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+.term-inputline:focus-within { box-shadow: inset 0 0 0 2px var(--focus-ring); }
+.term-prompt { color: var(--accent); white-space: nowrap; font-size: 14.5px; }
+.term-input {
+  flex: 1; min-width: 0; background: transparent; border: none; outline: none;
+  color: var(--ink); font-family: var(--font-mono); font-size: 14.5px; caret-color: var(--accent);
+}
+.term-input:disabled { opacity: 0.5; }
+
+.term-chips { flex: none; display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
+.term-chips button {
+  font-family: var(--font-mono); font-size: 12px;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill); border: 1px solid var(--border);
+  background: var(--surface-200); color: var(--ink); cursor: pointer;
+}
+.term-chips button:hover { color: var(--accent); }
+
+/* Four dark accent presets, set via `theme <name>` (data-accent on <html>);
+   only meaningful together with data-theme="terminal" — the light theme
+   (`theme daylight`) uses tokens.css's own daylight palette unchanged. */
+[data-theme="terminal"][data-accent="amber"] {
+  --accent: #ffb000; --accent-secondary: #ffd166; --focus-ring: var(--accent-secondary);
+}
+[data-theme="terminal"][data-accent="blue"] {
+  --accent: #4fc3f7; --accent-secondary: #8fdcff; --focus-ring: var(--accent-secondary);
+}
+[data-theme="terminal"][data-accent="cyberpunk"] {
+  --accent: #ff4d9e; --accent-secondary: #00e5ff; --focus-ring: var(--accent-secondary);
+}
+
+@media (max-width: 640px) {
+  .term-app { padding: var(--space-3); }
+  .term-legacy-link { font-size: 11px; }
+  .term-screen { min-height: 260px; } /* floor so a short mobile viewport can't flex it away to nothing */
+  .term-output, .term-inputline { padding-left: var(--space-3); padding-right: var(--space-3); }
+}
