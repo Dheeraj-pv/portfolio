@@ -31,6 +31,67 @@
     setCrt(html.classList.contains('crt-off'));
   });
 
+  // Matrix rain, same canvas/animation as the CLI build. Only visible in the
+  // margins outside .shell/.footer (see site.css) and forced off in the
+  // daylight theme, since it's a dark-theme-only visual gag either way.
+  var matrixToggle = document.getElementById('matrix-toggle');
+  var matrixCanvas = null, matrixRAF = null, matrixDrops = null;
+  function reducedMotion() {
+    return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+  function startMatrix() {
+    if (matrixCanvas) return;
+    matrixCanvas = document.createElement('canvas');
+    matrixCanvas.className = 'matrix-canvas';
+    matrixCanvas.setAttribute('aria-hidden', 'true');
+    document.body.insertBefore(matrixCanvas, document.body.firstChild);
+    var ctx = matrixCanvas.getContext('2d');
+    var matrixCols = 0;
+    function resize() {
+      matrixCanvas.width = window.innerWidth;
+      matrixCanvas.height = window.innerHeight;
+      matrixCols = Math.floor(window.innerWidth / 16);
+      matrixDrops = new Array(matrixCols).fill(0);
+    }
+    resize();
+    matrixCanvas._resize = resize;
+    window.addEventListener('resize', resize);
+    var chars = '01アイウエオカキクケコサシスセソ';
+    function draw() {
+      ctx.fillStyle = 'rgba(13,18,16,0.08)';
+      ctx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
+      ctx.fillStyle = getComputedStyle(html).getPropertyValue('--accent') || '#39ff88';
+      ctx.font = '14px monospace';
+      for (var i = 0; i < matrixDrops.length; i++) {
+        var ch = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(ch, i * 16, matrixDrops[i] * 16);
+        if (matrixDrops[i] * 16 > matrixCanvas.height && Math.random() > 0.975) matrixDrops[i] = 0;
+        matrixDrops[i]++;
+      }
+      matrixRAF = requestAnimationFrame(draw);
+    }
+    draw();
+  }
+  function stopMatrix() {
+    if (!matrixCanvas) return;
+    cancelAnimationFrame(matrixRAF);
+    window.removeEventListener('resize', matrixCanvas._resize);
+    matrixCanvas.remove();
+    matrixCanvas = null;
+  }
+  function setMatrix(on) {
+    if (on && reducedMotion()) on = false;
+    if (on) startMatrix(); else stopMatrix();
+    matrixToggle.textContent = on ? 'Matrix: On' : 'Matrix: Off';
+    try { localStorage.setItem('matrix', on ? '1' : '0'); } catch (e) {}
+  }
+  var matrixSaved = null;
+  try { matrixSaved = localStorage.getItem('matrix'); } catch (e) {}
+  setMatrix(matrixSaved === '1');
+  matrixToggle.addEventListener('click', function () {
+    setMatrix(!matrixCanvas);
+  });
+
   Array.prototype.forEach.call(document.querySelectorAll('.ds-project-card'), function (card) {
     Portfolio3D.initTilt(card);
   });

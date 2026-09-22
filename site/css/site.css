@@ -27,6 +27,14 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--focus-ring); ou
 /* The CRT toggle only matters in the dark theme; forcing it off wins over the rule above. */
 html.crt-off .crt-overlay { opacity: 0 !important; }
 
+/* Same Matrix-rain canvas as the CLI build (created/destroyed by main.js).
+   .shell is given its own opaque background + stacking context below so the
+   rain only shows in the margins outside the centered content, never behind
+   the text itself. Green-on-black only reads on the dark theme, so it's
+   forced off in daylight regardless of the toggle state. */
+.matrix-canvas { position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.55; }
+[data-theme="daylight"] .matrix-canvas { opacity: 0 !important; }
+
 .skip-link {
   position: absolute; left: var(--space-4); top: -100px; z-index: 30;
   padding: var(--space-2) var(--space-4);
@@ -95,7 +103,10 @@ html.crt-off .crt-overlay { opacity: 0 !important; }
 }
 
 /* Page shell */
-.shell { max-width: 1040px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-9); }
+.shell {
+  position: relative; z-index: 2; background: var(--surface-000);
+  max-width: 1040px; margin: 0 auto; padding: var(--space-8) var(--space-6) var(--space-9);
+}
 section { margin-top: var(--space-9); }
 section:first-child { margin-top: 0; }
 section h2 { margin: 0 0 var(--space-5); }
@@ -172,7 +183,7 @@ section h2 { margin: 0 0 var(--space-5); }
 .contact-note { color: var(--ink-muted); margin: 0; max-width: 640px; }
 
 /* Footer */
-.footer { border-top: 1px solid var(--border); }
+.footer { position: relative; z-index: 2; background: var(--surface-000); border-top: 1px solid var(--border); }
 .footer__inner { max-width: 1040px; margin: 0 auto; padding: var(--space-5) var(--space-6); color: var(--ink-muted); }
 
 /* Narrow screens: the type scale steps down, the hero grows so the crystal and the text don't collide */
@@ -186,7 +197,7 @@ section h2 { margin: 0 0 var(--space-5); }
 
   .topbar__inner { padding: var(--space-3) var(--space-4); gap: var(--space-3); }
   .topbar__nav { display: none; }
-  .crt-toggle { display: none; } /* keep the mobile titlebar down to one pill button */
+  .crt-toggle, .matrix-toggle { display: none; } /* keep the mobile titlebar down to one pill button */
   .boot-logo { font-size: 11px; line-height: 14px; }
   .shell { padding: var(--space-7) var(--space-4) var(--space-8); }
   section { margin-top: var(--space-8); }
