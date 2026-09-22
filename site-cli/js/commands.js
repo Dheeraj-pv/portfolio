@@ -54,28 +54,12 @@
       repo: 'https://github.com/Dheeraj-pv/tradeLink'
     },
     {
-      id: 'tradelink-fastapi', file: 'tradelink-fastapi.md', name: 'TradeLink (FastAPI edition)',
-      desc: 'The same marketplace rebuilt with a Python backend — FastAPI, SQLAlchemy 2, Alembic ' +
-        'migrations, Pydantic validation, JWT auth and TOTP two-factor login, a pytest suite and ' +
-        'pre-commit hooks.',
-      tags: ['FastAPI', 'SQLAlchemy 2', 'TOTP 2FA', 'Pytest'],
-      repo: 'https://github.com/Dheeraj-pv/tradeLink-FastApi'
-    },
-    {
       id: 'grama-panchayat', file: 'grama-panchayat.md', name: 'Grama Panchayat Citizen Portal',
       desc: 'A citizen-facing portal for local services — healthcare, education, transport, emergency ' +
         'contacts and tourism. Flask with SQLAlchemy and MySQL, Flask-Login auth, a Flask-Admin ' +
         'dashboard and email-based password reset with signed, expiring tokens.',
       tags: ['Flask', 'SQLAlchemy', 'MySQL', 'Flask-Admin'],
       repo: 'https://github.com/Dheeraj-pv/miniproject'
-    },
-    {
-      id: 'evo-munnar', file: 'evo-munnar.md', name: 'EVO Munnar',
-      desc: 'An Express backend serving a React (Vite) frontend — register and login flows, ' +
-        'cookie-based auth middleware that gates routes before static assets are served, and ' +
-        'server-rendered EJS bill pages.',
-      tags: ['Express', 'React', 'Vite', 'EJS'],
-      repo: 'https://github.com/Dheeraj-pv/EVO_MUNNAR'
     }
   ];
 
@@ -377,9 +361,7 @@
           api.print('Other repos (summarized, not literal commit text):');
           api.print([
             '        (tradelink)          Next.js 16 service marketplace — Prisma, JWT, MinIO, Docker',
-            '        (tradelink-fastapi)  Same marketplace rebuilt in FastAPI — SQLAlchemy 2, TOTP 2FA',
-            '        (grama-panchayat)    Flask citizen portal for local government services',
-            '        (evo-munnar)         Express + React app with cookie-based auth middleware'
+            '        (grama-panchayat)    Flask citizen portal for local government services'
           ].join('\n'));
           api.print('');
           api.printLink('full history: github.com/Dheeraj-pv', 'https://github.com/Dheeraj-pv');
