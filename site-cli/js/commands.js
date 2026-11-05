@@ -396,19 +396,19 @@
       theme: {
         desc: 'change the color scheme', run: function (args) {
           var name = (args[0] || '').toLowerCase();
-          if (!name) { api.print('current: ' + (state.themeName || 'green') + '\ntry: theme amber | theme blue | theme cyberpunk | theme daylight | theme green'); return; }
+          if (!name) { api.print('current: ' + (state.themeName || 'terminal') + '\ntry: theme amber | theme blue | theme cyberpunk | theme daylight | theme terminal'); return; }
           if (name === 'daylight') {
-            api.html.setAttribute('data-theme', 'daylight'); api.html.removeAttribute('data-accent');
+            api.html.setAttribute('data-theme', 'light'); api.html.removeAttribute('data-accent');
             state.themeName = 'daylight'; api.print('theme: daylight'); return;
           }
           if (name === 'terminal' || name === 'green') {
-            api.html.setAttribute('data-theme', 'terminal'); api.html.removeAttribute('data-accent');
-            state.themeName = 'green'; api.print('theme: green'); api.trackThemeVisit('green'); return;
+            api.html.setAttribute('data-theme', 'dark'); api.html.removeAttribute('data-accent');
+            state.themeName = 'terminal'; api.print('theme: terminal'); api.trackThemeVisit('terminal'); return;
           }
           if (['amber', 'blue', 'cyberpunk'].indexOf(name) === -1) {
-            api.print("theme: unknown scheme '" + name + "'. try green, amber, blue, cyberpunk, daylight", 'term-out-error'); return;
+            api.print("theme: unknown scheme '" + name + "'. try terminal, amber, blue, cyberpunk, daylight", 'term-out-error'); return;
           }
-          api.html.setAttribute('data-theme', 'terminal'); api.html.setAttribute('data-accent', name);
+          api.html.setAttribute('data-theme', 'dark'); api.html.setAttribute('data-accent', name);
           state.themeName = name; api.print('theme: ' + name); api.trackThemeVisit(name);
         }
       },

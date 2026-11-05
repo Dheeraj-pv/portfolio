@@ -16,7 +16,7 @@
     historyIndex: 0,
     achievements: loadJSON('cli-achievements', []),
     themeVisits: loadJSON('cli-theme-visits', []),
-    themeName: 'green',
+    themeName: 'terminal',
     matrix: false,
     sound: false,
     busy: false
@@ -100,7 +100,7 @@
       state.themeVisits.push(name);
       saveJSON('cli-theme-visits', state.themeVisits);
     }
-    var all = ['green', 'amber', 'blue', 'cyberpunk'];
+    var all = ['terminal', 'amber', 'blue', 'cyberpunk'];
     if (all.every(function (n) { return state.themeVisits.indexOf(n) !== -1; })) {
       unlock('themes', 'tried every color scheme');
     }
@@ -126,9 +126,9 @@
     window.addEventListener('resize', resize);
     var chars = '01アイウエオカキクケコサシスセソ';
     function draw() {
-      ctx.fillStyle = 'rgba(13,18,16,0.08)';
+      ctx.fillStyle = 'rgba(24,33,16,0.08)';
       ctx.fillRect(0, 0, matrixCanvas.width, matrixCanvas.height);
-      ctx.fillStyle = getComputedStyle(html).getPropertyValue('--accent') || '#39ff88';
+      ctx.fillStyle = getComputedStyle(html).getPropertyValue('--color-accent') || '#DDA15E';
       ctx.font = '14px monospace';
       for (var i = 0; i < matrixDrops.length; i++) {
         var ch = chars[Math.floor(Math.random() * chars.length)];

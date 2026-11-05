@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="terminal">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dheeraj P V — Full-stack developer</title>
 <meta name="description" content="Dheeraj P V is a full-stack developer building web platforms with Next.js, FastAPI and PostgreSQL. Projects, skills and contact.">
-<meta name="theme-color" content="#0d1210">
+<meta name="theme-color" content="#FEFAE0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#182110" media="(prefers-color-scheme: dark)">
 <meta property="og:title" content="Dheeraj P V — Full-stack developer">
 <meta property="og:description" content="Full-stack developer — Next.js, FastAPI, PostgreSQL.">
 <meta property="og:type" content="website">
@@ -16,257 +17,271 @@
 <meta name="twitter:title" content="Dheeraj P V — Full-stack developer">
 <meta name="twitter:description" content="Full-stack developer — Next.js, FastAPI, PostgreSQL.">
 <meta name="twitter:image" content="https://dheeraj-pv.github.io/portfolio/og-image.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1210'/%3E%3Cpath d='M9 5L9 27L14 27C21 27 26 22 26 16C26 10 21 5 14 5Z' fill='none' stroke='%2339ff88' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23DDA15E'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='system-ui,sans-serif' font-size='19' font-weight='700' fill='%23283618'%3ED%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..700&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/bundle.css">
 <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-  <div class="crt-overlay" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="topbar">
-    <div class="topbar__inner">
-      <span class="term-dots" aria-hidden="true">
-        <span class="term-dot term-dot--a"></span>
-        <span class="term-dot term-dot--b"></span>
-        <span class="term-dot term-dot--c"></span>
-      </span>
-      <div class="topbar__path">
-        <a class="topbar__brand code-tag" href="#top">dheeraj@portfolio:~$</a>
-        <span class="term-cursor" aria-hidden="true"></span>
-      </div>
-      <nav class="topbar__nav" aria-label="Sections">
-        <a href="#about">about.md</a>
-        <a href="#experience">experience.log</a>
-        <a href="#projects">projects/</a>
-        <a href="#skills">skills/</a>
-        <a href="#contact">contact.sh</a>
-      </nav>
-      <div class="topbar__controls">
-        <button class="theme-toggle fx-toggle" id="fx-toggle" type="button">FX: Off</button>
-        <button class="theme-toggle" id="theme-toggle" type="button">Daylight</button>
-      </div>
-    </div>
+  <header class="wrap site-header">
+    <a class="brand" href="#top">
+      <span class="mark" aria-hidden="true">D</span>
+      <span class="brand__name">Dheeraj P V</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn--outline btn--small" href="../Resume-Dheeraj%20pv.pdf">Résumé</a>
+    </nav>
   </header>
 
-  <main id="main" class="shell">
-    <section id="top" class="hero">
-      <pre class="boot-logo" aria-hidden="true">┌───────────────────┐
-│       D P V       │
-│  full-stack dev   │
-└───────────────────┘</pre>
-      <div class="boot-log" aria-hidden="true">
-        <p class="boot-line code-tag">Loading profile... done</p>
-        <p class="boot-line code-tag">Connecting to GitHub... done</p>
-        <p class="boot-line code-tag" id="boot-greeting">Thanks for stopping by.</p>
-        <p class="boot-skip-hint code-tag">press any key to skip</p>
+  <main id="main">
+    <section id="top" class="wrap hero">
+      <div class="hero__strip label">
+        <span>Full-stack developer</span>
+        <span class="hero__now"><span class="dot" aria-hidden="true"></span>Now — Software Engineering Intern at Lektik</span>
       </div>
-      <h1 class="display-xl">Dheeraj P V</h1>
-      <p class="hero__title"><span class="hero__tagline-text" id="hero-tagline">Full-stack developer — Next.js, FastAPI, PostgreSQL</span><span class="term-cursor" aria-hidden="true"></span></p>
-      <p class="hero__cli-prompt code-tag"><span class="section-prompt__sigil">$</span> Prefer a real terminal? <a href="../site-cli/index.html">Launch the interactive CLI version →</a></p>
-    </section>
-
-    <section id="about">
-      <h2 class="section-prompt"><span class="section-prompt__sigil">$</span> cat about.md</h2>
-      <p class="body-lg about">I build full-stack web apps end to end: layered APIs, authentication, storage, Docker deployment and polished frontends. I like clean architecture and small details, from a controller/service/repository split to a night-sky family history site.</p>
-    </section>
-
-    <section id="experience">
-      <h2 class="section-prompt"><span class="section-prompt__sigil">$</span> cat experience.log</h2>
-      <div class="ds-experience-list">
-        <article class="ds-project-card ds-experience-card">
-          <h3 class="ds-project-card__title display-md">Lektik — Software Engineering Intern</h3>
-          <p class="ds-experience-card__meta code-tag">June 2026 — Present</p>
-          <ul class="ds-experience-card__list body">
-            <li>Migrated CI/CD from self-hosted GitLab to GitHub Actions, building automated deploy pipelines across dev, staging, and production</li>
-            <li>Provisioned AWS infrastructure as code with Terraform (ECS, ECR, Cognito, IAM, SES), including CI trust policies and centralized secrets management</li>
-            <li>Contributed backend features and fixes in a Next.js/TypeScript + FastAPI/PostgreSQL codebase, working spec-first with written technical proposals for new features</li>
-          </ul>
-          <div class="ds-project-card__tags">
-            <span class="ds-skill-badge code-tag">Terraform</span>
-            <span class="ds-skill-badge code-tag">AWS</span>
-            <span class="ds-skill-badge code-tag">GitHub Actions</span>
-            <span class="ds-skill-badge code-tag">FastAPI</span>
+      <h1 class="hero__name">Dheeraj P V</h1>
+      <div class="hero__grid">
+        <div>
+          <p class="hero__lead">I build full-stack web apps end to end: layered APIs, authentication, storage, Docker deployment and polished frontends.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#work">See selected work <span aria-hidden="true">→</span></a>
+            <a class="btn btn--outline" href="mailto:dheeerajpv@gmail.com">Email me</a>
           </div>
-        </article>
-
-        <article class="ds-project-card ds-experience-card">
-          <h3 class="ds-project-card__title display-md">Jetpack Softs — Software Engineering Intern</h3>
-          <p class="ds-experience-card__meta code-tag">April 2025 — November 2025</p>
-          <ul class="ds-experience-card__list body">
-            <li>Built and maintained RESTful APIs for CRUD operations and database interactions using Node.js and MySQL</li>
-            <li>Developed backend functionality for a retail and service management platform — repairs, invoicing, and purchase tracking — with a focus on scalability</li>
-            <li>Integrated frontend components with backend services and documented features for deployment and maintenance</li>
-          </ul>
-          <div class="ds-project-card__tags">
-            <span class="ds-skill-badge code-tag">Node.js</span>
-            <span class="ds-skill-badge code-tag">JavaScript</span>
-            <span class="ds-skill-badge code-tag">MySQL</span>
-            <span class="ds-skill-badge code-tag">REST APIs</span>
+          <p class="hero__cli">Prefer a terminal? <a href="../site-cli/">Open the CLI version →</a></p>
+        </div>
+        <figure class="stack">
+          <figcaption class="label stack__caption"><span>Default stack</span><span>Request path ↓</span></figcaption>
+          <div class="stack__layer">
+            <div><div class="stack__num">01 · Interface</div><div class="stack__name">Next.js</div></div>
+            <div class="stack__detail">React · TypeScript · Tailwind CSS</div>
           </div>
-        </article>
+          <div class="stack__link" aria-hidden="true"></div>
+          <div class="stack__layer">
+            <div><div class="stack__num">02 · API</div><div class="stack__name">FastAPI</div></div>
+            <div class="stack__detail">Pydantic · SQLAlchemy · Alembic</div>
+          </div>
+          <div class="stack__link" aria-hidden="true"></div>
+          <div class="stack__layer">
+            <div><div class="stack__num">03 · Data</div><div class="stack__name">PostgreSQL</div></div>
+            <div class="stack__detail">Row-level security · MinIO / S3</div>
+          </div>
+          <div class="stack__link" aria-hidden="true"></div>
+          <div class="stack__layer stack__layer--brand">
+            <div><div class="stack__num">04 · Infra</div><div class="stack__name">Terraform on AWS</div></div>
+            <div class="stack__detail">Docker · GitHub Actions</div>
+          </div>
+        </figure>
       </div>
     </section>
 
-    <section id="projects">
-      <h2 class="section-prompt"><span class="section-prompt__sigil">$</span> ls projects/</h2>
-      <div class="project-grid">
-        <article class="ds-project-card ds-project-card--featured">
-          <h3 class="ds-project-card__title display-md">The Family Galaxy</h3>
-          <p class="ds-project-card__desc body">Relatives as stars in a night sky — before/after photo sliders, flippable postcards, and a timeline that ages the sky through the decades. Vanilla JS with Supabase (Postgres, Storage, row-level security) for shared cloud sync.</p>
-          <div class="ds-project-card__tags">
-            <span class="ds-skill-badge code-tag">Vanilla JS</span>
-            <span class="ds-skill-badge code-tag">Supabase</span>
-            <span class="ds-skill-badge code-tag">PostgreSQL</span>
-            <span class="ds-skill-badge code-tag">Row-level security</span>
-          </div>
-          <a class="ds-project-card__link body-sm" href="https://github.com/Dheeraj-pv/Family-Galaxy" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-
-        <article class="ds-project-card">
-          <h3 class="ds-project-card__title display-md">TradeLink</h3>
-          <p class="ds-project-card__desc body">A service marketplace on Next.js 16 (App Router) and TypeScript — route → controller → service → repository, Prisma with PostgreSQL, JWT auth, MinIO file storage, Firebase push notifications, OpenTelemetry. Ships with Docker.</p>
-          <div class="ds-project-card__tags">
-            <span class="ds-skill-badge code-tag">Next.js 16</span>
-            <span class="ds-skill-badge code-tag">Prisma</span>
-            <span class="ds-skill-badge code-tag">JWT</span>
-            <span class="ds-skill-badge code-tag">Docker</span>
-          </div>
-          <a class="ds-project-card__link body-sm" href="https://github.com/Dheeraj-pv/tradeLink" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-
-        <article class="ds-project-card">
-          <h3 class="ds-project-card__title display-md">Grama Panchayat Citizen Portal</h3>
-          <p class="ds-project-card__desc body">A citizen-facing portal for local services — healthcare, education, transport, emergency contacts and tourism. Flask with SQLAlchemy and MySQL, Flask-Login auth, a Flask-Admin dashboard and email-based password reset with signed, expiring tokens.</p>
-          <div class="ds-project-card__tags">
-            <span class="ds-skill-badge code-tag">Flask</span>
-            <span class="ds-skill-badge code-tag">SQLAlchemy</span>
-            <span class="ds-skill-badge code-tag">MySQL</span>
-            <span class="ds-skill-badge code-tag">Flask-Admin</span>
-          </div>
-          <a class="ds-project-card__link body-sm" href="https://github.com/Dheeraj-pv/miniproject" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-
-        <article class="ds-project-card">
-          <h3 class="ds-project-card__title display-md">BookMyShow Ticket Bot</h3>
-          <p class="ds-project-card__desc body">A Telegram bot that watches BookMyShow for a movie/venue/date and messages you the moment tickets go on sale. Stealth-wrapped headless Chromium scraping, per-user job scheduling with a busy lock to stop overlapping runs, and a global error handler.</p>
-          <div class="ds-project-card__tags">
-            <span class="ds-skill-badge code-tag">Python</span>
-            <span class="ds-skill-badge code-tag">python-telegram-bot</span>
-            <span class="ds-skill-badge code-tag">Playwright</span>
-          </div>
-          <a class="ds-project-card__link body-sm" href="https://github.com/Dheeraj-pv/bookmyshow-ticket-bot" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills">
-      <h2 class="section-prompt"><span class="section-prompt__sigil">$</span> grep -r skills/</h2>
-      <div class="ds-skill-group">
-        <span class="ds-skill-group__label caption">Languages</span>
-        <div class="ds-skill-row">
-          <span class="ds-skill-badge code-tag">TypeScript</span>
-          <span class="ds-skill-badge code-tag">JavaScript</span>
-          <span class="ds-skill-badge code-tag">Python</span>
-          <span class="ds-skill-badge code-tag">SQL</span>
-          <span class="ds-skill-badge code-tag">HTML/CSS</span>
-          <span class="ds-skill-badge code-tag">Bash</span>
-        </div>
-      </div>
-      <div class="ds-skill-group">
-        <span class="ds-skill-group__label caption">Frontend</span>
-        <div class="ds-skill-row">
-          <span class="ds-skill-badge code-tag">Next.js</span>
-          <span class="ds-skill-badge code-tag">React</span>
-          <span class="ds-skill-badge code-tag">Vite</span>
-          <span class="ds-skill-badge code-tag">Tailwind CSS</span>
-          <span class="ds-skill-badge code-tag">EJS</span>
-        </div>
-      </div>
-      <div class="ds-skill-group">
-        <span class="ds-skill-group__label caption">Backend</span>
-        <div class="ds-skill-row">
-          <span class="ds-skill-badge code-tag">FastAPI</span>
-          <span class="ds-skill-badge code-tag">Express</span>
-          <span class="ds-skill-badge code-tag">Flask</span>
-          <span class="ds-skill-badge code-tag">Prisma</span>
-          <span class="ds-skill-badge code-tag">SQLAlchemy</span>
-          <span class="ds-skill-badge code-tag">Alembic</span>
-          <span class="ds-skill-badge code-tag">Pydantic</span>
-          <span class="ds-skill-badge code-tag">Firebase Cloud Messaging</span>
-        </div>
-      </div>
-      <div class="ds-skill-group">
-        <span class="ds-skill-group__label caption">Auth &amp; security</span>
-        <div class="ds-skill-row">
-          <span class="ds-skill-badge code-tag">JWT</span>
-          <span class="ds-skill-badge code-tag">Sessions</span>
-          <span class="ds-skill-badge code-tag">bcrypt</span>
-          <span class="ds-skill-badge code-tag">TOTP 2FA</span>
-          <span class="ds-skill-badge code-tag">Row-level security</span>
-        </div>
-      </div>
-      <div class="ds-skill-group">
-        <span class="ds-skill-group__label caption">Data &amp; storage</span>
-        <div class="ds-skill-row">
-          <span class="ds-skill-badge code-tag">PostgreSQL</span>
-          <span class="ds-skill-badge code-tag">MySQL</span>
-          <span class="ds-skill-badge code-tag">Supabase</span>
-          <span class="ds-skill-badge code-tag">MinIO / S3</span>
-        </div>
-      </div>
-      <div class="ds-skill-group">
-        <span class="ds-skill-group__label caption">DevOps</span>
-        <div class="ds-skill-row">
-          <span class="ds-skill-badge code-tag">Docker</span>
-          <span class="ds-skill-badge code-tag">Docker Compose</span>
-          <span class="ds-skill-badge code-tag">GitHub Actions</span>
-          <span class="ds-skill-badge code-tag">AWS</span>
-          <span class="ds-skill-badge code-tag">Terraform</span>
-          <span class="ds-skill-badge code-tag">OpenTelemetry</span>
-          <span class="ds-skill-badge code-tag">Linux</span>
-        </div>
-      </div>
-      <div class="ds-skill-group">
-        <span class="ds-skill-group__label caption">Testing &amp; tooling</span>
-        <div class="ds-skill-row">
-          <span class="ds-skill-badge code-tag">Pytest</span>
-          <span class="ds-skill-badge code-tag">Vitest</span>
-          <span class="ds-skill-badge code-tag">Playwright</span>
-          <span class="ds-skill-badge code-tag">ESLint</span>
-          <span class="ds-skill-badge code-tag">Prettier</span>
-          <span class="ds-skill-badge code-tag">Git</span>
-          <span class="ds-skill-badge code-tag">Claude Code</span>
+    <section id="about" class="section">
+      <div class="wrap section__inner split">
+        <p class="label split__side"><span class="num">01</span> — About</p>
+        <div class="split__main">
+          <p class="about__lead">I like clean architecture and small details, from a controller/service/repository split to a night-sky family history site.</p>
+          <dl class="facts">
+            <div><dt class="label">Now</dt><dd>Software Engineering Intern, Lektik</dd></div>
+            <div><dt class="label">Focus</dt><dd>Backend, CI/CD, infrastructure as code</dd></div>
+            <div><dt class="label">How</dt><dd>Spec-first, with written technical proposals</dd></div>
+            <div><dt class="label">Code</dt><dd><a href="https://github.com/Dheeraj-pv" target="_blank" rel="noopener">github.com/Dheeraj-pv</a></dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <h2 class="section-prompt"><span class="section-prompt__sigil">$</span> ./contact.sh</h2>
-      <p class="body contact-note">The source for everything above is on GitHub.</p>
-      <div class="contact-row">
-        <!-- Add LinkedIn / resume here as .ds-contact-link entries once you want them listed. -->
-        <a class="ds-contact-link" href="mailto:dheeerajpv@gmail.com">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><path d="M3 6.5l9 6 9-6"/></svg>
-          <span class="ds-contact-link__label body-sm">Email</span>
-        </a>
-        <a class="ds-contact-link" href="https://github.com/Dheeraj-pv" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.4c0-.9.3-1.5.7-1.9-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2V19"/></svg>
-          <span class="ds-contact-link__label body-sm">GitHub</span>
-        </a>
+    <section id="work" class="section">
+      <div class="wrap section__inner">
+        <div class="split split--head">
+          <p class="label split__side"><span class="num">02</span> — Work</p>
+          <h2 class="split__main section__title">Selected projects</h2>
+        </div>
+
+        <article class="featured">
+          <div class="sky" aria-hidden="true">
+            <span style="left: 12%; top: 18%; --s: 4px"></span>
+            <span class="glow" style="left: 28%; top: 34%; --s: 6px"></span>
+            <span class="dim" style="left: 44%; top: 14%; --s: 3px"></span>
+            <span style="left: 61%; top: 27%; --s: 5px"></span>
+            <span class="dim" style="left: 78%; top: 16%; --s: 3px"></span>
+            <span class="glow" style="left: 86%; top: 42%; --s: 7px"></span>
+            <span class="dim" style="left: 18%; top: 58%; --s: 3px"></span>
+            <span style="left: 37%; top: 66%; --s: 5px"></span>
+            <span class="brand-star" style="left: 53%; top: 49%; --s: 8px"></span>
+            <span style="left: 70%; top: 63%; --s: 4px"></span>
+            <span class="dim" style="left: 90%; top: 74%; --s: 3px"></span>
+            <span style="left: 8%; top: 80%; --s: 5px"></span>
+            <span class="dim" style="left: 47%; top: 82%; --s: 3px"></span>
+          </div>
+          <div class="featured__body">
+            <p class="label"><span class="num">01</span> · Featured</p>
+            <h3 class="featured__title">The Family Galaxy</h3>
+            <p class="body">Relatives as stars in a night sky. Vanilla JS with Supabase (Postgres, Storage, row-level security) for shared cloud sync.</p>
+            <ul class="ticks">
+              <li>Before/after photo sliders</li>
+              <li>Flippable postcards</li>
+              <li>A timeline that ages the sky through the decades</li>
+              <li>Shared cloud sync behind row-level security</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Vanilla JS</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Row-level security</span>
+            </div>
+            <a class="text-link" href="https://github.com/Dheeraj-pv/Family-Galaxy" target="_blank" rel="noopener">View on GitHub →</a>
+          </div>
+        </article>
+
+        <div class="rows">
+          <article class="project">
+            <span class="project__num">02</span>
+            <h3 class="project__title">TradeLink</h3>
+            <div class="project__body">
+              <p class="body">A service marketplace on Next.js 16 (App Router) and TypeScript — route → controller → service → repository, Prisma with PostgreSQL, JWT auth, MinIO file storage, Firebase push notifications, OpenTelemetry. Ships with Docker.</p>
+              <div class="project__foot">
+                <div class="tags">
+                  <span class="tag tag--filled">Next.js 16</span>
+                  <span class="tag tag--filled">Prisma</span>
+                  <span class="tag tag--filled">JWT</span>
+                  <span class="tag tag--filled">Docker</span>
+                </div>
+                <a class="text-link text-link--small" href="https://github.com/Dheeraj-pv/tradeLink" target="_blank" rel="noopener">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project__num">03</span>
+            <h3 class="project__title">Grama Panchayat Citizen Portal</h3>
+            <div class="project__body">
+              <p class="body">A citizen-facing portal for local services — healthcare, education, transport, emergency contacts and tourism. Flask with SQLAlchemy and MySQL, Flask-Login auth, a Flask-Admin dashboard and email-based password reset with signed, expiring tokens.</p>
+              <div class="project__foot">
+                <div class="tags">
+                  <span class="tag tag--filled">Flask</span>
+                  <span class="tag tag--filled">SQLAlchemy</span>
+                  <span class="tag tag--filled">MySQL</span>
+                  <span class="tag tag--filled">Flask-Admin</span>
+                </div>
+                <a class="text-link text-link--small" href="https://github.com/Dheeraj-pv/miniproject" target="_blank" rel="noopener">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <span class="project__num">04</span>
+            <h3 class="project__title">BookMyShow Ticket Bot</h3>
+            <div class="project__body">
+              <p class="body">A Telegram bot that watches BookMyShow for a movie/venue/date and messages you the moment tickets go on sale. Stealth-wrapped headless Chromium scraping, per-user job scheduling with a busy lock to stop overlapping runs, and a global error handler.</p>
+              <div class="project__foot">
+                <div class="tags">
+                  <span class="tag tag--filled">Python</span>
+                  <span class="tag tag--filled">python-telegram-bot</span>
+                  <span class="tag tag--filled">Playwright</span>
+                </div>
+                <a class="text-link text-link--small" href="https://github.com/Dheeraj-pv/bookmyshow-ticket-bot" target="_blank" rel="noopener">GitHub →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="wrap section__inner">
+        <div class="split split--head">
+          <p class="label split__side"><span class="num">03</span> — Experience</p>
+          <h2 class="split__main section__title">Where I've worked</h2>
+        </div>
+
+        <div class="rows">
+          <article class="split job">
+            <p class="split__side job__dates">Jun 2026 — Present</p>
+            <div class="split__main">
+              <h3 class="job__company">Lektik</h3>
+              <p class="job__role">Software Engineering Intern</p>
+              <ul class="job__list">
+                <li>Migrated CI/CD from self-hosted GitLab to GitHub Actions, building automated deploy pipelines across dev, staging, and production</li>
+                <li>Provisioned AWS infrastructure as code with Terraform (ECS, ECR, Cognito, IAM, SES), including CI trust policies and centralized secrets management</li>
+                <li>Contributed backend features and fixes in a Next.js/TypeScript + FastAPI/PostgreSQL codebase, working spec-first with written technical proposals for new features</li>
+              </ul>
+              <div class="tags">
+                <span class="tag tag--filled">Terraform</span>
+                <span class="tag tag--filled">AWS</span>
+                <span class="tag tag--filled">GitHub Actions</span>
+                <span class="tag tag--filled">FastAPI</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="split job">
+            <p class="split__side job__dates">Apr 2025 — Nov 2025</p>
+            <div class="split__main">
+              <h3 class="job__company">Jetpack Softs</h3>
+              <p class="job__role">Software Engineering Intern</p>
+              <ul class="job__list">
+                <li>Built and maintained RESTful APIs for CRUD operations and database interactions using Node.js and MySQL</li>
+                <li>Developed backend functionality for a retail and service management platform — repairs, invoicing, and purchase tracking — with a focus on scalability</li>
+                <li>Integrated frontend components with backend services and documented features for deployment and maintenance</li>
+              </ul>
+              <div class="tags">
+                <span class="tag tag--filled">Node.js</span>
+                <span class="tag tag--filled">JavaScript</span>
+                <span class="tag tag--filled">MySQL</span>
+                <span class="tag tag--filled">REST APIs</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="wrap section__inner">
+        <div class="split split--head">
+          <p class="label split__side"><span class="num">04</span> — Skills</p>
+          <h2 class="split__main section__title">Tools I use</h2>
+        </div>
+        <dl class="rows skills">
+          <div class="split"><dt class="label split__side">Languages</dt><dd class="split__main">TypeScript, JavaScript, Python, SQL, HTML/CSS, Bash</dd></div>
+          <div class="split"><dt class="label split__side">Frontend</dt><dd class="split__main">Next.js, React, Vite, Tailwind CSS, EJS</dd></div>
+          <div class="split"><dt class="label split__side">Backend</dt><dd class="split__main">FastAPI, Express, Flask, Prisma, SQLAlchemy, Alembic, Pydantic, Firebase Cloud Messaging</dd></div>
+          <div class="split"><dt class="label split__side">Auth &amp; security</dt><dd class="split__main">JWT, Sessions, bcrypt, TOTP 2FA, Row-level security</dd></div>
+          <div class="split"><dt class="label split__side">Data &amp; storage</dt><dd class="split__main">PostgreSQL, MySQL, Supabase, MinIO / S3</dd></div>
+          <div class="split"><dt class="label split__side">DevOps</dt><dd class="split__main">Docker, Docker Compose, GitHub Actions, AWS, Terraform, OpenTelemetry, Linux</dd></div>
+          <div class="split"><dt class="label split__side">Testing &amp; tooling</dt><dd class="split__main">Pytest, Vitest, Playwright, ESLint, Prettier, Git, Claude Code</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap contact__inner">
+        <p class="label contact__label"><span class="num">05</span> — Contact</p>
+        <h2 class="contact__title">Get in touch.</h2>
+        <p class="contact__note">The source for everything above is on GitHub.</p>
+        <a class="contact__email" href="mailto:dheeerajpv@gmail.com">dheeerajpv@gmail.com</a>
+        <div class="contact__links">
+          <a class="pill" href="https://github.com/Dheeraj-pv" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.4c0-.9.3-1.5.7-1.9-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2V19"/></svg>GitHub</a>
+          <a class="pill" href="../Resume-Dheeraj%20pv.pdf">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>Résumé (PDF)</a>
+          <a class="pill" href="../site-cli/">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l6 6-6 6"/><path d="M12 18h8"/></svg>CLI version</a>
+        </div>
+        <footer class="footer">
+          <span>© 2026 Dheeraj P V</span>
+          <a href="#top">Back to top ↑</a>
+        </footer>
       </div>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="footer__inner body-sm">© 2026 Dheeraj P V</div>
-  </footer>
-
-  <script src="js/bundle.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>
